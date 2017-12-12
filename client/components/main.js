@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import Board from './board';
-import Cell from './cell';
-import Controls from './controls';
+import {Kingdoms} from './kingdoms';
 
 export default class Main extends Component {
     constructor () {
@@ -12,6 +10,7 @@ export default class Main extends Component {
         return (
             <div>
                 <h1> This is the main </h1>
+                <Kingdoms />
             </div>
         )
     }
