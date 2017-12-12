@@ -10,8 +10,10 @@ export default class Kingdoms extends Component {
     }
 
     componentDidMount () {
-        axios.get('/api/kingdoms')
+        axios.get('/api/kingdoms/')
         .then(response => {
+            //this is where the state of the component should get set, but the api route is not working correctly at the moment
+            
             //this.setState({kingdoms: response})
             console.log('kingdoms:', response);
         })
