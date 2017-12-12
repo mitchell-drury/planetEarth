@@ -19,3 +19,6 @@ I created the association for kingdom and phylum, further associations will foll
 Currently debugging the kingdom component. On mount it is not hitting the correct api route, and thus not rendering the select list appropriately.
 
 The goal would be to have a select list for each sub category of classification and the list of organisms would be appropriately sorted each time a user changes one of those. 
+
+It took a while to get a boilerplate going. I haven't used too many actually other than a fairly minimal one that I have used personnaly.
+
