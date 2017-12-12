@@ -11,16 +11,19 @@ const app = express();
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '..', '/public')))
 
+app.use('/api', require('./routes'));
+
 app.get('*', function (req, res, next) {
     res.status(200).send('../public/index.html');
 })
 
-app.use('/api', require('./routes'));
+
 
 const server = app.listen(port, () => {
     console.log('Planet Earth')
-    db.sync({force:true})
+    db.sync({force:false})
   });
+  
 const io = socketio(server);
 
 require('../socket/socket.js')(io);

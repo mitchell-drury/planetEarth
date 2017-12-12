@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Kingdoms} from './kingdoms';
+import Kingdoms from './kingdoms';
+import Phylums from './phylums';
 
 export default class Main extends Component {
     constructor () {
@@ -9,8 +10,9 @@ export default class Main extends Component {
     render () {
         return (
             <div>
-                <h1> This is the main </h1>
+                Planet Earth
                 <Kingdoms />
+                <Phylums />
             </div>
         )
     }

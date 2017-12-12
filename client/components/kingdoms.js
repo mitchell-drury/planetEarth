@@ -10,9 +10,10 @@ export default class Kingdoms extends Component {
     }
 
     componentDidMount () {
-        axios.get('./api/kingdoms')
+        axios.get('/api/kingdoms')
         .then(response => {
-            this.setState({kingdoms: response})
+            //this.setState({kingdoms: response})
+            console.log('kingdoms:', response);
         })
     }
 
@@ -20,9 +21,10 @@ export default class Kingdoms extends Component {
         return (
             <div>
                 <select> 
+                <option> Select Kingdom </option>
                 {
                     this.state.kingdoms.map((option, index) => {
-                        return <option key={index} value={option}> option </option>
+                        return <option key={index} value={option.name}> option </option>
                     })
                 }
                 </select>
